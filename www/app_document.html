@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>Predict the Price of Your Car</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+<h1>Predict the Price of Your Car</h1>
+
+<h3>Sunday, September 21, 2014</h3>
+
+<h1></h1>
+
+<h2>Synopsis</h2>
+
+<p>This application implements a multivariate regression model to determine car values based on a variety of characteristics such as mileage, make, model, engine size, interior style, and cruise control. Users can select the variables  for linear regression and the output is the price of the car. </p>
+
+<h2>Dataset Introduction</h2>
+
+<p>This application uses the &#39;caret::cars&#39; dataset from Rstudio. In this data set, a representative sample of over eight hundred 2005 GM cars were selected, then retail price was calculated from the tables provided in the 2005 Central Edition of the Kelly Blue Book (see Section 11).</p>
+
+<p>In this dataset, the value of each variable is bounded and restricted. Thus, this application can only produce reasonable predictions for variables within some range, e.g. the input value of mileage should roubgly lie in [0,60000] to get confident results. </p>
+
+<h2>Application Guideline</h2>
+
+<p><em>Step 1</em> Input the parameters of your car which include:</p>
+
+<ul>
+<li>car type: indicator representing type of your car such as convertible, coupe, hatchback, sedan and wagon</li>
+<li>car manufacturer: indicator representing manufacturer of your car such as Buick, Cadillac, etc. </li>
+<li>Mileage: number of miles the car has been driven</li>
+<li>Cylinder: number of cylinders in the engine </li>
+<li>Doors: number of doors </li>
+<li>Cruise: indicator variable representing whether the car has cruise control (1 = cruise)</li>
+<li>Sound: indicator variable representing whether the car has upgraded speakers (1 = upgraded)</li>
+<li>Leather: indicator variable representing whether the car has leather seats (1 = leather)</li>
+</ul>
+
+<p>Note: you can input some or all of the parameters before clicking the submit button to get the results. By default, your car is convertible Buick, with cruise control, upgraded speakers and leather seats. Once your typing is not non-negative integer or contains special characters, it is will be ignored automatically. </p>
+
+<p><em>Step 2</em> Submit your task by clicking the &ldquo;Submit&rdquo; button at the left bottom.
+The coefficients of each variable for your linear regression model will show up. This is followed by the valid input, which makes it easy for you to check your input. At last, the output price of your car is printed out with a residual plot to check for heteroskedasticity, normality, autocorrelation, and multicollinearity as well as explore techniques for variable selection and develop specially constructed 
+variables.</p>
+
+<p>Note: if you want to check the codes to generate this application, click the given links below:</p>
+
+<ul>
+<li><a href="https://github.com/szywind/Project-shiny-app">codes</a></li>
+</ul>
+
+<h1></h1>
+
+<h2>Reference</h2>
+
+<ol>
+<li><a href="http://www.amstat.org/publications/jse/v16n3/kuiper.pdf">Kuiper, S. (2008). Introduction to Multiple Regression: How Much Is Your Car Worth?, Journal of Statistics Education, Vol. 16</a></li>
+<li><a href="http://rstudio.github.io/shiny/tutorial">Shiny Tutorial</a></li>
+</ol>
+
+</body>
+
+</html>
+

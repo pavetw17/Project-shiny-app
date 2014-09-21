@@ -23,10 +23,14 @@ shinyUI(pageWithSidebar(
         p('Predicted Price'),
         verbatimTextOutput('text3'),
         plotOutput('residuePlot'),
-        helpText("Note: The input values in the text box should be integers with no space; blank or non-integer inputs will be regarded as invalid ones and ignored.\n"),
-        a("Click Here for the Documentation of this Application", href="http://www.sina.com"),
-        helpText(" "),
-        a("Click Here for the Code of this Application in Github", href="http://www.sina.com")
-    )    
+        #helpText("Note: The input values in the text box should be integers with no space; blank or non-integer inputs will be regarded as invalid ones and ignored.\n"),
+        #a("Click Here for the Documentation of this Application", href="http://www.sina.com"),
+        #helpText(" "),
+        #a("Click Here for the Code of this Application in Github", href="https://github.com/szywind/Project-shiny-app")
+    
+        p(em("Documentation:",a("Click Here for the Documentation of this Application",href="index.html"))),
+        p(em("Codes:",a("Click Here for the Code of this Application in Github", href="https://github.com/szywind/Project-shiny-app")))
+        
+    )  
 
 ))
